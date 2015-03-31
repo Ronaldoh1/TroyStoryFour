@@ -10,7 +10,7 @@
 		F2C5E4631ACB13580094705A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E4621ACB13580094705A /* main.m */; };
 		F2C5E4661ACB13580094705A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E4651ACB13580094705A /* AppDelegate.m */; };
 		F2C5E4691ACB13580094705A /* TroyStoryFour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E4671ACB13580094705A /* TroyStoryFour.xcdatamodeld */; };
-		F2C5E46C1ACB13580094705A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E46B1ACB13580094705A /* ViewController.m */; };
+		F2C5E46C1ACB13580094705A /* WarriorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E46B1ACB13580094705A /* WarriorListViewController.m */; };
 		F2C5E46F1ACB13580094705A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5E46D1ACB13580094705A /* Main.storyboard */; };
 		F2C5E4711ACB13580094705A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C5E4701ACB13580094705A /* Images.xcassets */; };
 		F2C5E4741ACB13580094705A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C5E4721ACB13580094705A /* LaunchScreen.xib */; };
@@ -34,8 +34,8 @@
 		F2C5E4641ACB13580094705A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2C5E4651ACB13580094705A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F2C5E4681ACB13580094705A /* TroyStoryFour.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TroyStoryFour.xcdatamodel; sourceTree = "<group>"; };
-		F2C5E46A1ACB13580094705A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F2C5E46B1ACB13580094705A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2C5E46A1ACB13580094705A /* WarriorListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WarriorListViewController.h; sourceTree = "<group>"; };
+		F2C5E46B1ACB13580094705A /* WarriorListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarriorListViewController.m; sourceTree = "<group>"; };
 		F2C5E46E1ACB13580094705A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2C5E4701ACB13580094705A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2C5E4731ACB13580094705A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			children = (
 				F2C5E4641ACB13580094705A /* AppDelegate.h */,
 				F2C5E4651ACB13580094705A /* AppDelegate.m */,
-				F2C5E46A1ACB13580094705A /* ViewController.h */,
-				F2C5E46B1ACB13580094705A /* ViewController.m */,
+				F2C5E46A1ACB13580094705A /* WarriorListViewController.h */,
+				F2C5E46B1ACB13580094705A /* WarriorListViewController.m */,
 				F2C5E46D1ACB13580094705A /* Main.storyboard */,
 				F2C5E4701ACB13580094705A /* Images.xcassets */,
 				F2C5E4721ACB13580094705A /* LaunchScreen.xib */,
@@ -224,7 +224,7 @@
 			files = (
 				F2C5E4661ACB13580094705A /* AppDelegate.m in Sources */,
 				F2C5E4691ACB13580094705A /* TroyStoryFour.xcdatamodeld in Sources */,
-				F2C5E46C1ACB13580094705A /* ViewController.m in Sources */,
+				F2C5E46C1ACB13580094705A /* WarriorListViewController.m in Sources */,
 				F2C5E4631ACB13580094705A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
