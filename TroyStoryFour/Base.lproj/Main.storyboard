@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-g7-Fr6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="-20" width="414" height="681"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" textLabel="HZi-Pu-cbQ" detailTextLabel="Si4-jf-0jb" style="IBUITableViewCellStyleSubtitle" id="eBX-2T-JS5">
@@ -47,19 +47,33 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="apF-zI-YhA"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-Qb-8RK">
+                                <rect key="frame" x="177" y="679" width="61" height="29"/>
+                                <segments>
+                                    <segment title="&lt;5"/>
+                                    <segment title="&gt;5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="1kS-UO-Sgf"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uv1-Qb-8RK" secondAttribute="trailing" constant="160" id="5S2-jf-jBM"/>
+                            <constraint firstItem="Uv1-Qb-8RK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="161" id="98S-uc-S2Q"/>
                             <constraint firstItem="dfn-g7-Fr6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Geb-xx-bPR"/>
-                            <constraint firstItem="dfn-g7-Fr6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="RuR-Fe-eEH"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="dfn-g7-Fr6" secondAttribute="bottom" id="UYO-qT-zL5"/>
+                            <constraint firstItem="dfn-g7-Fr6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-20" id="RuR-Fe-eEH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dfn-g7-Fr6" secondAttribute="bottom" constant="75" id="UYO-qT-zL5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Uv1-Qb-8RK" secondAttribute="bottom" constant="29" id="ZkF-TI-3Eb"/>
+                            <constraint firstItem="Uv1-Qb-8RK" firstAttribute="top" secondItem="dfn-g7-Fr6" secondAttribute="bottom" constant="18" id="ZxC-Zz-Vi1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dfn-g7-Fr6" secondAttribute="trailing" constant="-16" id="vSS-fW-QNj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L11-B1-se6">
                         <nil key="title"/>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="fKF-XN-7tB">
-                            <rect key="frame" x="57.5" y="7" width="299" height="30"/>
+                            <rect key="frame" x="131.5" y="7" width="151" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -70,12 +84,13 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="segControl" destination="Uv1-Qb-8RK" id="l3e-pm-lq1"/>
                         <outlet property="tableView" destination="dfn-g7-Fr6" id="lXo-tx-gNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="242"/>
+            <point key="canvasLocation" x="914" y="242"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vw7-XR-cDI">

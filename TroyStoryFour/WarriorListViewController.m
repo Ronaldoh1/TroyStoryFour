@@ -13,6 +13,9 @@
 @property NSManagedObjectContext *context;
 @property NSArray *warriors;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSString *tempStr;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
 
 @end
 
@@ -23,12 +26,20 @@
 
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     self.context = appDelegate.managedObjectContext;
-    [self load];
-    
+    [self loadPredicateWithFormat:nil];
+
 }
 
--(void)load{
+-(void)loadPredicateWithFormat:(NSString *)format{
+
+
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Warrior"];
+    NSSortDescriptor *sortDescriptor1 = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+      NSSortDescriptor *sortDescriptor2 = [NSSortDescriptor sortDescriptorWithKey:@"prowess" ascending:YES];
+    request.sortDescriptors = [NSArray arrayWithObjects:sortDescriptor2,sortDescriptor1, nil];
+    request.predicate =[NSPredicate predicateWithFormat:format !=nil ? format: @"prowess =>5"];
+    
+
     self.warriors = [self.context executeFetchRequest:request error:nil];
     [self.tableView reloadData];
 
@@ -57,7 +68,16 @@
     NSNumber *randInt = [NSNumber numberWithLong:arc4random() % 10];
     [newWarrior setValue:randInt forKey:@"prowess"];
     [self.context save:nil];
-    [self load];
+    [self loadPredicateWithFormat:nil];
+  
+}
+- (IBAction)segmentedControl:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex== 0) {
+        [self loadPredicateWithFormat:nil];
+    }else{
+        [self loadPredicateWithFormat:@"prowess < 5"];
+    }
+
 }
 
 
